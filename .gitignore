@@ -2,11 +2,11 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+.run
 # C extensions
 *.so
-
 # Distribution / packaging
+.idea
 .Python
 build/
 develop-eggs/
