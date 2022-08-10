@@ -69,15 +69,15 @@ WHERE t1.c in
 
 -- SELECT 6
 SELECT list.city, SUM(list.active) as active, COUNT(*)-SUM(list.active) as not_active
-FROM
-(
-SELECT t3.city, t1.active
-FROM customer as t1
-INNER JOIN address as t2 ON t1.address_id=t2.address_id
-INNER JOIN city as t3 ON t2.city_id=t3.city_id
-) as list
-GROUP BY list.city
-ORDER BY not_active DESC;
+    FROM
+    (
+        SELECT t3.city, t1.active
+        FROM customer as t1
+        INNER JOIN address as t2 ON t1.address_id=t2.address_id
+        INNER JOIN city as t3 ON t2.city_id=t3.city_id
+    ) as list
+    GROUP BY list.city
+    ORDER BY not_active DESC;
 
 
 -- SELECT 7
